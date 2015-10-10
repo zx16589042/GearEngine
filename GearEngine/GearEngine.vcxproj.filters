@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="org.devefx">
+      <UniqueIdentifier>{7e4f6581-3cf0-44b4-92b3-7395152c5f74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="org.devefx\renderer">
+      <UniqueIdentifier>{b7de69ba-91bf-4c70-943d-b76e06ab5fc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="org.devefx\platform">
+      <UniqueIdentifier>{1fd46ebc-1ba0-4481-80c4-1cd54581e693}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="org.devefx\renderer\Renderer.h">
+      <Filter>org.devefx\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="org.devefx\platform\win32\Application.h" />
+    <ClInclude Include="org.devefx\base\Director.h" />
+    <ClInclude Include="org.devefx\platform\GEView.h" />
+    <ClInclude Include="org.devefx\math\Geometry.h" />
+    <ClInclude Include="org.devefx\platform\desktop\GEViewImpl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="org.devefx\platform\win32\Application.cpp" />
+    <ClCompile Include="org.devefx\base\Director.cpp" />
+    <ClCompile Include="org.devefx\platform\GEView.cpp" />
+    <ClCompile Include="org.devefx\math\Geometry.cpp" />
+    <ClCompile Include="org.devefx\platform\desktop\GEViewImpl.cpp" />
+  </ItemGroup>
+</Project>
