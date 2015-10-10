@@ -62,7 +62,7 @@ bool GEViewImpl::initWithRect( const std::string viewName, Size size )
 		return false;
 	}
 
-	HWND hwnd = CreateWindow("GearEngine", viewName.c_str(), WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX, 
+	hwnd = CreateWindow("GearEngine", viewName.c_str(), WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX, 
 		CW_USEDEFAULT, CW_USEDEFAULT, int(size.width), int(size.height), NULL, NULL, wndClass.hInstance, NULL);
 	
 	RECT windowRect, clientRect;
@@ -94,4 +94,10 @@ bool GEViewImpl::initWithRect( const std::string viewName, Size size )
 	UnregisterClass("GearEngine", wndClass.hInstance);
 
 	return true;
+}
+
+void GEViewImpl::setViewName( const std::string& viewname )
+{
+	_viewName = viewname;
+	SetWindowText(hwnd, _viewName.c_str());
 }
